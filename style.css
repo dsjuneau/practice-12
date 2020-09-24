@@ -1,41 +1,45 @@
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
 }
 
 header {
-  position: relative;
+  min-height: 7vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: auto 1fr;
+  grid-template-areas: "b h";
   background-color: dodgerblue;
 }
 
 header h1 {
   align-self: center;
   text-align: center;
+  grid-area: h;
 }
 
 #cb {
   display: none;
 }
-.hamburger {
-  position: absolute;
-  top: 0.4em;
-  left: 0.4em;
-}
 
-.hamburger label {
-  display: block;
+#lb {
+  display: grid;
+  grid-area: b;
+  justify-items: center;
+  align-items: center;
   border: black 1px solid;
-  width: 1.5em;
+  width: 2em;
   height: 1.5em;
-  border-radius: 5px;
+  border-radius: 0.25em;
+  margin-left: 0.5em;
+  align-self: center;
 }
 main {
   background-color: floralwhite;
   height: 200vh;
+}
+
+nav {
+  display: none;
 }
 
 nav ul {
@@ -49,6 +53,19 @@ footer {
   background-color: deepskyblue;
 }
 
+#lb span {
+  width: 1.25em;
+  border-bottom: 2px solid black;
+}
+
+#lb:hover {
+  background-color: blue;
+}
+
+#cb:checked nav {
+  opacity: 1;
+}
+
 @media (min-width: 800px) {
   header {
     display: grid;
@@ -57,6 +74,7 @@ footer {
   }
   header h1 {
     grid-area: m;
+    align-self: center;
   }
 
   header nav {
@@ -79,7 +97,7 @@ footer {
   nav ul li:hover {
     background-color: gainsboro;
   }
-  .hamburger {
+  #lb {
     display: none;
   }
 }
