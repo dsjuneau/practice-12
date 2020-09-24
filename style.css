@@ -6,10 +6,33 @@
 }
 
 header {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
   background-color: dodgerblue;
+}
+
+header h1 {
+  align-self: center;
   text-align: center;
 }
 
+#cb {
+  display: none;
+}
+.hamburger {
+  position: absolute;
+  top: 0.4em;
+  left: 0.4em;
+}
+
+.hamburger label {
+  display: block;
+  border: black 1px solid;
+  width: 1.5em;
+  height: 1.5em;
+  border-radius: 5px;
+}
 main {
   background-color: floralwhite;
   height: 200vh;
@@ -20,6 +43,7 @@ nav ul {
 }
 nav ul a {
   text-decoration: none;
+  text-align: center;
 }
 footer {
   background-color: deepskyblue;
@@ -54,5 +78,8 @@ footer {
   }
   nav ul li:hover {
     background-color: gainsboro;
+  }
+  .hamburger {
+    display: none;
   }
 }
