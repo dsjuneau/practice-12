@@ -1,4 +1,4 @@
-# practice-12
+# Hamburger Menu
 
 Make a hamburger icon that displays a menu
 

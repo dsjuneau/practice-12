@@ -71,8 +71,8 @@ footer {
 @media (min-width: 800px) {
   header {
     display: grid;
-    grid-template-columns: 1fr 1fr auto 1fr;
-    grid-template-areas: ". m r .";
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "m m r";
   }
   header h1 {
     grid-area: m;
