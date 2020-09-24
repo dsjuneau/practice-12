@@ -42,12 +42,14 @@ nav {
   display: none;
 }
 
-nav ul {
-  list-style: none;
-}
-nav ul a {
+nav a {
+  margin-left: 0.5em;
+  padding: 0.25em 0;
   text-decoration: none;
-  text-align: center;
+  text-align: left;
+}
+nav a:hover {
+  background-color: cornsilk;
 }
 footer {
   background-color: deepskyblue;
@@ -62,8 +64,8 @@ footer {
   background-color: blue;
 }
 
-#cb:checked nav {
-  opacity: 1;
+#cb:checked ~ nav {
+  display: grid;
 }
 
 @media (min-width: 800px) {
@@ -82,19 +84,18 @@ footer {
   }
   nav {
     display: grid;
-    align-items: end;
-  }
-  nav ul {
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
-  nav ul li {
-    display: grid;
     align-items: end;
+  }
+
+  nav a {
+    padding: 1em 0 0 0;
+    text-align: center;
+    margin: 0;
     width: 5em;
     height: 2em;
   }
-  nav ul li:hover {
+  nav a:hover {
     background-color: gainsboro;
   }
   #lb {
